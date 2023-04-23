@@ -4,13 +4,18 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  /*
+  const app = await NestFactory.create(AppModule, { cors: true });
+  { cors: true } - Alternatively, set the cors property to true to enable CORS with default settings
+  */
+  app.enableCors(); // CORS enabled
   // global prefix
   app.setGlobalPrefix('api');
 
   // swagger config
   const options = new DocumentBuilder()
     .setTitle('NestJS API Example')
-    .setDescription('Przykładowy projekt w Node.js')
+    .setDescription('Przykładowy projekt w NestJS')
     .setVersion('1.0')
     .addTag('user')
     .addBearerAuth()
