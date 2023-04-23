@@ -21,7 +21,7 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
-Navigate to http://localhost:4200/api and for Swagger http://localhost:3000/api/docs
+Navigate to http://localhost:3000/api and for Swagger http://localhost:3000/api/docs
 
 
 ## Test
